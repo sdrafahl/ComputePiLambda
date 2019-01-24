@@ -18,6 +18,3 @@ Resources:
           Properties:
             Path: /computePi
             Method: GET
-      Enviroment:
-        Variables:
-          REGION: us-east-2
