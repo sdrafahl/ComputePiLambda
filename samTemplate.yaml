@@ -16,8 +16,8 @@ Resources:
         getAZsAPI:
           Type: API
           Properties:
-            Path: /getazs
-            Method: get
+            Path: /computePi
+            Method: GET
       Enviroment:
         Variables:
           REGION: us-east-2
