@@ -12,4 +12,3 @@ exports.compute = () => {
   }
   return pi * 4;
 }
-//
