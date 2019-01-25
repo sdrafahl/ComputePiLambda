@@ -1,20 +1,16 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Transform: 'AWS::Serverless-2016-10-31'
-Description: Lambda
+Transform: AWS::Serverless-2016-10-31
+Description: Outputs the time
 Resources:
-  computePiLambda:
-    Type: 'AWS::Serverless::Function'
+  TimeFunction:
+    Type: AWS::Serverless::Function
     Properties:
-      Handler: lambda_function.lambda_handler
-      Runtime: nodejs8.10
-      CodeUri: ./lambdaCode
-      Description: 'Lambda to compute pi'
-      MemorySize: 128
-      Timeout: 30
-      Role: 'arn:aws:iam::061753407487:role/LambdaRole'
+      Handler: index.handler
+      Runtime: nodejs6.10
+      CodeUri: ./
       Events:
-        getAZsAPI:
-          Type: API
+        MyTimeApi:
+          Type: Api
           Properties:
-            Path: /computePi
+            Path: /TimeResource
             Method: GET
