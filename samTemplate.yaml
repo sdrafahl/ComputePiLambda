@@ -14,3 +14,10 @@ Resources:
           Properties:
             Path: /ComputePi
             Method: GET
+  LambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: 'lambda:*'
+      FunctionName: !GetAtt
+        - ComputePi
+      Principal: 'apigateway.amazonaws.com'
