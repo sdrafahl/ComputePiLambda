@@ -1,8 +1,8 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: Outputs the time
+Description: Outputs Pi
 Resources:
-  TimeFunction:
+  ComputePi:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
