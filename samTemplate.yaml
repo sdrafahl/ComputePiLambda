@@ -18,6 +18,5 @@ Resources:
     Type: AWS::Lambda::Permission
     Properties:
       Action: 'lambda:*'
-      FunctionName: !GetAtt
-        - ComputePi
+      FunctionName: !Ref ComputePi
       Principal: 'apigateway.amazonaws.com'
