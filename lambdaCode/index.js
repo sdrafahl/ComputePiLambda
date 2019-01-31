@@ -1,4 +1,4 @@
-exports.compute = () => {
+exports.handler = (event, context, callback) => {
   let x;
   let denominator = 1;
   let pi = 0;
@@ -10,5 +10,5 @@ exports.compute = () => {
     }
     denominator += 2;
   }
-  return pi * 4;
+  callback(null ,pi * 4);
 }
