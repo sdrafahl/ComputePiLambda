@@ -9,7 +9,7 @@ Resources:
       Runtime: nodejs6.10
       CodeUri: ./lambdaCode
       Events:
-        MyTimeApi:
+        ComputePiApi:
           Type: Api
           Properties:
             Path: /ComputePi
