@@ -10,5 +10,13 @@ exports.handler = (event, context, callback) => {
     }
     denominator += 2;
   }
-  callback(null ,pi * 4);
+
+  let response = {
+        "statusCode": 200,
+        "headers": {},
+        "body": pi * 4,
+        "isBase64Encoded": false
+    };
+
+    callback(null ,response);
 }
