@@ -8,6 +8,7 @@ Resources:
       Handler: index.handler
       Runtime: nodejs6.10
       CodeUri: ./lambdaCode
+      Timeout: 15
       Events:
         ComputePiApi:
           Type: Api
